@@ -30,6 +30,8 @@ def validate(text):
         )
     if text.strip() == "":
         raise ValueError("entry is only whitespace")
+    if text != text.strip():
+        raise ValueError("entry has leading or trailing whitespace")
     if "\n" in text or "\r" in text:
         raise ValueError("entry must be a single line")
     return text
@@ -42,6 +44,8 @@ def self_test():
         (" ", "whitespace-only"),
         ("x" * 201, "201 chars"),
         ("a\nb", "multi-line"),
+        ("trailing ", "trailing whitespace"),
+        (" leading", "leading whitespace"),
     ]
     for text, label in cases:
         try:

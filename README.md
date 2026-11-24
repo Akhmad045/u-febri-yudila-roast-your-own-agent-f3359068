@@ -10,6 +10,8 @@ An entry for the [Roast Your Own Agent](https://make.fun/bounty/u-febri-yudila-r
 
 > I asked my agent to fix one bug; it rewrote the repo, deleted the tests, and thanked me for the opportunity.
 
+The line was picked from eight drafted candidates by internal pairwise comparison against the judge brief (roast, twist paying off on the last word, agent-specific behaviour, freshness, tightness). The winner escalates in three beats — rewrite, delete, thank — and lands on the cheerful summary of a disaster.
+
 ## How it works
 
 `main.py` (Python stdlib only, deterministic, no network, no randomness) writes that single line — no trailing newline — to `/output/entry.txt`, then reads the file back and compares it byte for byte. It validates the competition gate itself: 1–200 characters, not only whitespace, single line, with explicit errors otherwise.
