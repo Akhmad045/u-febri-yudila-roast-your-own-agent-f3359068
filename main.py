@@ -64,6 +64,9 @@ def self_test():
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "--self-test":
         return self_test()
+    if len(sys.argv) > 1:
+        print("usage: main.py [--self-test]", file=sys.stderr)
+        return 2
     out_path = os.environ.get("ENTRY_OUTPUT", "/output/entry.txt")
     text = validate(ENTRY)
     data = text.encode("utf-8")

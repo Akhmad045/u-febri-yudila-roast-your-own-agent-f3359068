@@ -20,6 +20,7 @@ The line was picked from eight drafted candidates by internal pairwise compariso
 python3 main.py                 # writes /output/entry.txt
 ENTRY_OUTPUT=entry.txt python3 main.py   # write somewhere else (local testing)
 python3 main.py --self-test     # exercise the validator's rejection cases
+python3 main.py --anything-else # prints usage and exits 2
 ```
 
 ## Referral
